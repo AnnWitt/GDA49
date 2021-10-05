@@ -1,0 +1,395 @@
+short = 2 bajty 16 bitów od -32768 do +32768
+int 4 bajty
+long 8 bajtów 64 bity (czesto w bazach danych) (-2^63 - +2^63) dodajemy do liczby L np
+long zmiennaLong=10L;
+Long vs long - typ prymitywny a z wielkiej opakowane w obiekt. przy OBiekcie Long
+musi być to L, przy prymitywnym zadziała. Do obiektu można przypisać nulla, do prymitywnej
+nie mozna dodac wartosci nieoznaczonej (nulla)
+
+float/double typy zmiennoprzeciwnkowe
+float myFloatNumber=1.343424f; //f musi byc F lub f
+double myDoubleNumber=1.333d; //d musi byc D lub d
+
+        boolean myFalse=false;
+        boolean myTrue=true;
+        boolean myBoolean=myFalse && myTrue ; // true jeżeli obie będą true
+
+        && - and
+        || - or
+
+typ znakowy - char
+\t - tab
+\n - nowa linia
+\r - powrot karetki -> powrót do początku linii i nadpis (calości)
+
+char signValue='y';
+char tab='\t';
+np dp wyszukania znaku w kodzie
+
+String - typ łańcuchowy typ niemutowalny (nie moze byc zmieniany)
+
+operator += dodajemy podana wartosc i od razu przypisujemy
+i=10
+i+=20 //i =30
+
+% reszta z dzielenia
+
+post i preinkretementakcja
+int x=5;
+sout x++ ->5 wypisane - zwiekszenie po wypisaniu
+sput ++x ->6 zwiekszenie przed wypisaniem
+
+== rowne
+!= rozne
+! ->negacja np!(bot1||bot2)
+
+Konwersja typów
+niejawna - bbez konwersji , bez (int)
+int i =25 -> float j=i; int na float //cho tu moze byc strata przy duzych wartosciach
+
+rzutowanie - konwersja z mozliwoscia utraty (jawne z (int))
+(typ) zmienna np
+double n=99.98
+int m=(int) n; ---> 99
+int m2= (int) mMath.round(n) --->100
+
+instrukcje sterujace
+1f (warunek) {inst1} else {instr2}
+if (warunek1) {instr1} else if (warunek2) {instr}
+... elseif moze byc duzo ... else {instr3}
+
+switch (zmienna) {
+    case wartosc1
+    kod jezeli prawda
+    break; //bez break pojdzie dalej i wywola np defaulta
+    case wartosc2
+    default
+}
+
+petle
+for, while, dowhile
+
+for(deklaracja licznika; warunek; modyfikacja){}
+for (int i=0;i<10;i++) {cos}
+
+for (int i=1; i<=50;i=i+5)
+
+for each po tablicach
+ String[] imiona = {"Ala", "Adam", "Amdrzej","Ola","Pawel","Ewa"};
+        for (String imie : imiona) {
+            System.out.println("Imie: " + imie);
+
+
+            While (warunek) {instrukcja}
+
+            int i=0
+            while (i<10) { sout (i);
+            ++i;)
+
+
+do { instrukcja } while (warunek)
+wykona sie przynajmniej raz a nastepnie sprawdzi warunek
+        String[]imiona={"imie1", "imie2","imi3"} ;
+        int i= imiona.length;
+        int index=0;
+        do {
+            System.out.println(imiona[index]);
+            i++;
+        }
+        while (i< imiona.length);
+
+        warunek nigdy nie jest prawdziwy ale zdazył juz jeden raz wyswietlic
+
+        break; - przerwanie petli aby nie mieliło dalej
+
+            private static void przykladBrak() {
+                for (int i=0; i<10;i++) {
+                    if (i==3) {break;} --> konczy
+                        System.out.println(i);
+                }
+            }
+
+            private static void przykladContinue() {
+                for (int i=0; i<10;i++) {
+                    if (i==8) {continue;} //wyswietli bez 8
+                    System.out.println(i);
+                }
+            }
+
+Klasa String
+- literał String myTekstPrimit="tekst";
+- konstruktor String myTextkonstr = new String("text2"); //z tego mozna null przypisac, do prymitywnego nie
+
+klasa stirng niemutowalna - powstaje nowy string. nie posiada metoddy ()np setter)
+
+        System.out.println(text1==text2); //true
+        System.out.println(text2==text3); //false
+        System.out.println(text1==text3); //ctrl d na koncu wiersza //false
+        System.out.println(text1.equals(text2)); //true
+        System.out.println(text1.equals(text3)); //true
+
+        == -? equals -> roznica - w 1 czy ta sama referencja, druga sprawdzanie stricte wartosci
+        zasadniczo dla Stringów korzystamy z equals dla porównan
+
+API serwis zewnętrzny - googlnij restful api
+
+   //String - konkatenacjia napisów
+
+        System.out.println(text1+text2);
+         ....  (text.concat(text2))
+
+         indexof - pozycja pierwszego wystapienia iagu no test.indexof("is")
+
+         text.replaceAll("a","o")) podmiana a na o
+
+
+Wejscie/wyjscie
+
+Scanner skan=new Scanner(System.in)
+String textwczutany=skan.nextline()
+nextInt, Double, Boolean
+
+printf() z formatowaniem
+
+e,f,x,o,s,c,b np printf(44,2) z 2 miejscami po przecinku
+
+Metody - grupy instrukcji
+moze zawierac argumenty lub nie
+int diff(int arg1,int arg2) {
+return arg1-arg2;
+}
+mozna zamiast listy wybrac obiekt
+
+void nie zwraca nic, jak no int to musi byc return
+
+void + return to np return jezeli jakis warunek spelniony. Return pelni funkcję breaka
+
+Tablice
+
+jedno/wielowymiarowe - rozmiar powinien byc staly
+
+typ[] nazwa=new typ[liczba elementow]
+
+String[] array=new String[]{"w1","w2,"w3"}
+
+array[2]="ddd"; (dp 3 komorki tablicy)
+
+array.lenght - wierszy
+arrau[i].lenght - ile kolumn
+
+tablice z tablicami (obiekty)
+
+typ[][]tablicaWiel
+tablicaWiel= new typ[l wierszy][l kolumnn] np new String[2][];
+tablicaWiel[0]=new String[]{"ddd","www"}; pierwszy wiersz
+tablicaWiel[1]=new String[]{"dd2d","w2ww"}; drugi wiersz
+
+Inny zapis warunku
+return foundNumbers.isEmpty() ? Collections.singletonList(-1) : foundnumbers
+
+if (foundNumbers.isEmpty()) {
+    return Collections.singletonList(-1) ;
+} else {
+    return foundnumbers;
+}
+
+
+        if (liczba1>liczba2) {
+            m1=liczba1;
+        } else {
+            m1=liczba2;
+        }
+
+        m2 = liczba3>liczba4 ? liczba3: liczba4;
+
+UWAGI - ENUM/CLASS ROZNICA
+
+
+TABLICA WYWOLANA Z METODY DO UZYCIA
+    static int[] tablica () {
+        int[] tblTest=new int[]{3,5,6,7,2};
+        return tblTest;
+    };
+
+    A MAIN
+    int[] x=tablica();
+            System.out.println(x[2]);
+
+
+
+            Klsy/obiekty
+
+            pole - zmienna, cecha klasy
+            metoda operacja
+            klasa schemat na ktory zdefiniowane sa pola i metody
+
+
+
+package z20210821;
+
+public class samochod {
+    private String color="Czerwony";
+    public String getColor(){
+        return color;
+    }
+    public void setColor (String color) {  //kolor wprowadzony
+        this.color = color; //this to czerwony (mimo, że ta sama nazwa zmiennej)
+    }
+
+}
+
+    public void setColor (String colorWprowadzony) {  //kolor wprowadzony
+
+        this.color = colorWprowadzony; //this to czerwony
+    }
+
+    modyfikatory dostepu [modyf] xx class {}
+    public - dostep z kazdego miejsca aplikacji
+    protected -
+    default - package private (gdy nic nie wpiszemy) - dziala w ramach pakietu, poza nim  nie
+    private
+
+    obiwekty=instancje klasy
+gettery i settery tez moga miec modyfikatory
+
+    new wywoluje tzw kontruktor (Car car1=new Car()
+
+enkapsulacja - zamykanie pol w prywatnych i dobieranie sie do nich getterami i setterami (pola w miare mozliwosci powinny byc prywatne
+
+protected - w ramach pakietu,
+
+PAKIETY
+    package pl.sdaa.example //odwrocona nazwa domeny // mozna te same nazwy klas w roznych pakietach
+    rozdzielamy kropkami, powinna odpowiadac strikturze na dysku
+
+
+    importowanie klas
+
+    impost nazwa.pakietu.klasa;
+   ---------------------
+    import dwoch las po tej samej nazwie
+
+    import    pl.sda.xxx.secondex
+
+    Book testBook=new Book()
+
+    pl.sda.xxx.secondex.Book secondTestBook= new ....
+
+    --------
+
+    import staqtyczny
+
+    public static void //statyczne
+
+   import static java.lang.Math.PI;
+    wtedy można to wywołać samym PI
+    Pomocne przy stałych bo nie trzeba MAth.PI
+
+
+    KONSTRUKTORY
+
+        SPECJALNY RODZAJ METODY DO INICJALIZOWANIA STANU OBIEKTU (WARTOSCI POCZATKOWE)
+        NAZWA KONTRUKTORA IDENTYCZNA Z NAZWĄ KLASY
+        NIC NIE ZWraca (nawet nie void), brak deklaracji zwrcaneog typi (np int)
+        przyjmuje dowolną liczbę elemenów wejsciowych
+
+konstruktor zwykle publiczny ale może być prywatny
+jezeli brak konsturktora to jest bezparametrowy, domyuslny
+
+fklasa moze byc tez final zamiennie to private
+
+przeciazenie konstruktorow - aby miec wiecej o tej samej nazwie ale musi miec rozna ilosc parametrow
+
+przy statycznej nie jest koniecznie utworzenie obiektu
+wystarczy odwolac sie bezposrednio do klasy
+
+
+klasy wewnętrzne - klasa w klasie Myouterklas.myinnerklas .....
+
+Myouterklas nazwa=new myouterclass()
+
+int vs Integer - ten drugi moze miec nulla
+
+throw new RuntimeException()
+
+public class lock {
+private int kod
+public void przekladnia () {
+kod++; (zwiekszanie o 1 ... dlatego nie moze byc final
+}
+
+}
+
+--------------
+
+Varargs - zmienne liczb y argumentow tego samego typu
+
+----- wyrazenia regularne
+
+regex - czy dane maja poprawny format
+
+z sekwencji atomow
+literał - literac cyfra itd
+kwantyfikatory - liczba wystapien atomu
+
+zakres znakow albo w kwadraotywch bez przecinkow [abc]
+abo przedział [1-3;0-9]
+
+implementujemy klasami Pattern i Matcher
+
+Pattern pattern=Pattern.compile("a+bcd")
+Matcher matcher=pattern.macher
+ Na przykład wyrażenie regularne \d{2}-\d{3} opisuje zbiór kodów pocztowych w Polsce.
+
+Klasa Matcher posiada, między innymi, następujące metody:
+
+find() – metoda zwraca true jeśli w łańcuchu znaków znajduje się coś co pasuje do wyrażenia regularnego,
+matches() – metoda zwraca true jeśli łańcuch znaków pasuje w całości do wyrażenia regularnego.
+https://www.samouczekprogramisty.pl/wyrazenia-regularne-w-jezyku-java/
+
+wyrażenia regularne mogą zawierać zwykłe literały znakowe, na przykład kot czy pies to poprawne wyrażenie regularne.
+Jednak są znaki, które interpretowane są w specjalny sposób. Wyrażenie takie jak 1 + 2 = 3 zawiera jeden ze znaków
+specjalnych – znak +. W związku z tym, jeśli znak + chcemy interpretować dosłownie musimy poprzedzić go znakiem \, wówczas
+pomijamy jego specjalne znaczenie. W takim przypadku otrzymasz wyrażenie regularne 1 \+ 2 = 3.
+
+W języku Java wyrażenia regularne zapisujemy używając typu String. Znak \ jest w literałach znakowych traktowany
+specjalnie (podobnie jak w samych wyrażeniach regularnych). Na przykład literał znakowy "\t" oznacza znak tabulacji,
+więc przy zapisie "1 \+ 2 = 3" kompilator Javy doszukiwałby się specjalnego znaczenia dla "\+" (podobnie jak przy "\t") a
+nie o to nam tutaj chodzi. Dlatego właśnie w języku Java w wyrażeniach regularnych musimy „dublować” każdy ukośnik
+
+Znak ? oznacza – element znajdujący się wcześniej jest opcjonalny. Innymi słowy to co występuje przed ? może wystąpić
+raz lub może zostać pominięte. Na przykład do wyrażenia regularnego kr?at pasują zarówno "krat" jak i "kat" ale nie
+pasuje "kot" czy "krrat".
+
+Znak * oznacza – powtórz dowolną liczbę razy element znajdujący się wcześnie
+
+Znak + jest podobny do *. Oznacza on, że występujący przed nim element musi być powtórzony 1 lub więcej razy
+
+Poza znakami ?, + i *, które określają dopuszczalną liczbę powtórzeń możesz też użyć {}. Jednak {} ma większe możliwości:
+{x} – oznacza że element poprzedzający musi wystąpić dokładnie x razy,
+{x,} – oznacza, że element poprzedzający musi wystąpić co najmniej x razy,
+{x,y} – oznacza, że element poprzedzający musi wystąpić od x do y razy.
+Zauważ, że symbole ?, * i + możemy zastąpić {}. Na przykład wyrażenia regularne al*a i al{0,}a czy al+a i al{1,}a są
+sobie równoznaczne. Jednak zapis z ?, + czy * jest krótszy przez co częściej stosowany.
+
+np a{2,3}b{4,9}c{1,9} itd
+
+
+Znak .Permalink
+Znak oznacza dowolny symbol (poza znakiem nowej linii). Innymi słowy do wyrażenia regularnego ko.ek pasują zarówno
+ "kotek" jak i "korek" ale nie pasuje "koek" czy "ktek".
+
+
+ Takie często używane klasy zostały wbudowane w wyrażenia regularne pod postacią predefiniowanych klas. Wszystkie predefiniowane klasy prezentuje lista poniżej:
+ \d – jakakolwiek cyfra [0-9],
+ \D – jakikolwiek znak, który nie jest cyfrą [^0-9],
+ \w – znak używany w słowach [a-zA-Z0-9_] (zauważ, że mamy tu znak _),
+ \W – jakikolwiek znak, który nie jest używany w słowach [^a-zA-Z0-9_],
+ \s – tak zwane białe znaki czyli znak spacji czy tabulacji [ \t\n\r\f\x0B]. Możesz je opisać jako znaki, które nie są widoczne podczas wydruku,
+ \S – negacja grupy \s czyli [^ \t\n\r\f\x0B]
+
+
+         String ciagZnakowWzorzec="[a-z]+";
+         Pattern wzorzec=Pattern.compile(ciagZnakowWzorzec);
+         Matcher dopasowanie= wzorzec.matcher(ciagZnakow);
+         System.out.println(" Dla ciągu znaków " + ciagZnakow + ": "+ dopasowanie.matches());
